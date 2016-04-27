@@ -1,8 +1,8 @@
 {
-  "name": "react-webpack-node",
-  "version": "1.7.4",
-  "description": "A simple Node.js app using Express 4 with Webpack, React, alt, ImmutableJS",
-  "repository": "https://github.com/choonkending/react-webpack-node",
+  "name": "yoorcity",
+  "version": "1.0.0",
+  "description": "Real-time social network for things happening in your city",
+  "repository": "https://github.com/jahmaiosullivan/socialnetwork",
   "main": "index.js",
   "scripts": {
     "babel": "babel --presets es2015,stage-0 --ignore node_modules,public",
@@ -20,7 +20,7 @@
     "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
     "postinstall": "npm run build"
   },
-  "author": "Choon Ken Ding",
+  "author": "Jahmai OSullivan",
   "license": "MIT",
   "devDependencies": {
     "eslint-config-airbnb": "^7.0.0",
