@@ -4,44 +4,7 @@ import styles from 'css/components/post.less';
 var cx = classNames.bind(styles);
 import riverImg from 'images/river.jpg';
 
-var Post = React.createClass({
-    render: function () {
-        return (
-            <div className={styles['post-outer']}>
-                <Post.Time />
-                <Post.Body />
-            </div>
-        );
-    }
-});
-
-Post.Body = React.createClass({
-   render: function()
-   {
-       return (
-           <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
-               <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
-                   <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
-                   <Post.Summary />
-               </div>
-           </article>
-       );
-   }
-});
-
-Post.Time = React.createClass({
-    render: function() {
-        return (
-            <span id="post-time">
-                <span className="dday">04</span>
-                <span className="dmonth">Oct</span>
-                <span className="dyear">2015</span>
-            </span>
-        );
-    }
-});
-
-Post.Image = React.createClass({
+var PostImage = React.createClass({
     render: function () {
         return (
             <div className="postthumb postimage">
@@ -75,18 +38,18 @@ Post.Image = React.createClass({
     }
 });
 
-Post.Bottom = React.createClass({
+var PostBottom = React.createClass({
     render: function() {
         return (
             <div className="post-bottom">
-            <div className="post-title">
-                <strong>
-                    <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html" title="lake surrounded by green trees">
-                        lake surrounded by green trees
-                    </a>
-                </strong>
-            </div>
-            <div className="post-details">
+                <div className="post-title">
+                    <strong>
+                        <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html" title="lake surrounded by green trees">
+                            lake surrounded by green trees
+                        </a>
+                    </strong>
+                </div>
+                <div className="post-details">
                                     <span className="post-author">
                                         <i className="fa fa-user"></i>
                                         <a href="https://plus.google.com/108152365170057624125" rel="author" title="author profile">
@@ -101,32 +64,75 @@ Post.Bottom = React.createClass({
                                         <i className="fa fa-tag"></i>
                                         <a href="http://timeline-demo2.blogspot.com/search/label/Nature" rel="tag">Nature</a>
                                     </span>
+                </div>
+                <p className="post-snippet">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ...
+                </p>
+                <div className="clear"></div>
+                <div className="read-more-link">
+                    <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html#more" title="Read more » lake surrounded by green trees">
+                        Read more »
+                    </a>
+                </div>
             </div>
-            <p className="post-snippet">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ...
-            </p>
-            <div className="clear"></div>
-            <div className="read-more-link">
-                <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html#more" title="Read more » lake surrounded by green trees">
-                    Read more »
-                </a>
-            </div>
-        </div>
         );
     }
 });
 
-Post.Summary = React.createClass({
-   render: function() {
+var PostSummary = React.createClass({
+    render: function() {
+        return (
+            <div className="post-summary" id="summaryContainer-7678110904519489062">
+                <div className="post-top">
+                    <PostImage imgSrc={riverImg} />
+                </div>
+                <PostBottom />
+            </div>
+        );
+    }
+});
+
+var PostBody = React.createClass({
+   render: function()
+   {
        return (
-           <div className="post-summary" id="summaryContainer-7678110904519489062">
-               <div className="post-top">
-                   <Post.Image imgSrc={riverImg} />
+           <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
+               <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
+                   <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
+                   <PostSummary />
                </div>
-               <Post.Bottom />
-           </div>
+           </article>
        );
    }
 });
+
+var PostTime = React.createClass({
+    render: function() {
+        return (
+            <span id="post-time">
+                <span className="dday">04</span>
+                <span className="dmonth">Oct</span>
+                <span className="dyear">2015</span>
+            </span>
+        );
+    }
+});
+
+var Post = React.createClass({
+    render: function () {
+        return (
+            <div className={styles['post-outer']}>
+                <PostTime />
+                <PostBody />
+            </div>
+        );
+    }
+});
+
+
+
+
+
+
 
 export default Post;
