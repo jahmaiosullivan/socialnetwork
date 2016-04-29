@@ -2,6 +2,7 @@
 import classNames from 'classnames/bind';
 import styles from 'css/components/post.less';
 var cx = classNames.bind(styles);
+import riverImg from 'images/river.jpg';
 
 var Post = React.createClass({
     render: function () {
@@ -19,7 +20,7 @@ var Post = React.createClass({
                             <div className="post-top">
                                 <div className="postthumb postimage">
                                     <a className="thumbimgx" data-placement="top" data-toggle="tooltip" href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html" title="" data-original-title="lake surrounded by green trees">
-                                        <img alt="lake surrounded by green trees"  className="thumbimg" height="281" src="./Timeline2_files/CM7EPBYLQA(1).jpg" width="468.5" />
+                                        <img alt="lake surrounded by green trees"  className="thumbimg" height="281" src={riverImg} width="468.5" />
                                     </a>
                                     <div className="image-hover">
                                         <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html">
