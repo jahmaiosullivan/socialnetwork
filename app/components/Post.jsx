@@ -9,15 +9,24 @@ var Post = React.createClass({
         return (
             <div className={styles['post-outer']}>
                 <Post.Time />
-                <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
-                    <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
-                        <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
-                        <Post.Summary />
-                    </div>
-                </article>
+                <Post.Body />
             </div>
         );
     }
+});
+
+Post.Body = React.createClass({
+   render: function()
+   {
+       return (
+           <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
+               <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
+                   <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
+                   <Post.Summary />
+               </div>
+           </article>
+       );
+   }
 });
 
 Post.Time = React.createClass({
