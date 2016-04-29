@@ -6,7 +6,7 @@ var cx = classNames.bind(styles);
 var Post = React.createClass({
     render: function () {
         return (
-            <div className="post-outer">
+            <div className={styles['post-outer']}>
                 <span id="post-time">
                     <span className="dday">04</span>
                     <span className="dmonth">Oct</span>
