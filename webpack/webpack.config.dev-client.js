@@ -94,11 +94,11 @@ module.exports = {
       loaders: commonLoaders.concat([
       {
           test: /\.less$/,
-          loader: 'style!css!less?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+          loader: 'style!css!less?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader'
       },
         {
           test: /\.css$/,
-          loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+          loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader'
         }
       ])
     },
@@ -115,5 +115,6 @@ module.exports = {
           __DEVCLIENT__: true,
           __DEVSERVER__: false
         })
-    ]
+    ],
+    postcss: postCSSConfig
 };
