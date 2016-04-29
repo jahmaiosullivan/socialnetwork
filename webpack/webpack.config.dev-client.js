@@ -92,7 +92,12 @@ module.exports = {
     },
     module: {
       loaders: commonLoaders.concat([
-        { test: /\.css$/,
+      {
+          test: /\.less$/,
+          loader: 'style!css!less?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+      },
+        {
+          test: /\.css$/,
           loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
         }
       ])

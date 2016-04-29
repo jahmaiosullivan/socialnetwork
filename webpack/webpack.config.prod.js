@@ -36,6 +36,9 @@ var commonLoaders = [
         limit: 10000,
     }
   },
+    { test: /\.less$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module!postcss-loader', 'less')
+    },
   { test: /\.css$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module!postcss-loader')
   }
