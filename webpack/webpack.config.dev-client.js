@@ -93,7 +93,7 @@ module.exports = {
     module: {
       loaders: commonLoaders.concat([
         { test: /\.css$/,
-          loader: 'style!css?module&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+          loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
         }
       ])
     },
@@ -110,6 +110,5 @@ module.exports = {
           __DEVCLIENT__: true,
           __DEVSERVER__: false
         })
-    ],
-    postcss: postCSSConfig
+    ]
 };

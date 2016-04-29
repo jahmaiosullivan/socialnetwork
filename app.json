@@ -1,5 +1,5 @@
 {
-  "name": "React Node Express Mongo",
+  "name": "YoorCity",
   "description": "A social network for your city built using Express 4 with MongoDB, and ReactJS in Flux, using Webpack as a module bundler",
   "repository": "https://github.com/jahmaiosullivan/socialnetwork",
   "logo": "",

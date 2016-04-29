@@ -4,15 +4,10 @@
 }
 
 .header {
-  composes: heading from '../common/typography';
-
   text-align: center;
 }
 
 .input {
-  composes: heading from '../common/typography';
-  composes: input from '../common/input';
-
   text-align: center;
   outline: none;
 }

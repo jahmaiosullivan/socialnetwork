@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
 import Navigation from 'containers/Navigation';
+import FixedNav from 'containers/FixedNav';
+import Post from 'components/Post';
 import Message from 'containers/Message';
-import classNames from 'classnames/bind';
 import styles from 'css/main';
-
-const cx = classNames.bind(styles);
 
 
 /*
@@ -18,7 +17,8 @@ const cx = classNames.bind(styles);
  */
 const App = ({children}) => {
   return (
-    <div className={cx('app')}>
+    <div className={styles.app}>
+      <Post />
       <Navigation />
       <Message />
         {children}

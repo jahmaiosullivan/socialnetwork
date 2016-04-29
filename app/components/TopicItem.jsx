@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames/bind';
 import styles from 'css/components/topic-item';
 
-const cx = classNames.bind(styles);
 
 export default class TopicItem extends Component {
   constructor(props) {
@@ -29,17 +27,11 @@ export default class TopicItem extends Component {
 
   render() {
     return (
-      <li className={cx('topic-item')} key={this.props.id}>
-        <span className={cx('topic')}>{this.props.text}</span>
-        <button className={
-          cx('button', 'increment')
-        } onClick={this.onIncrement}>+</button>
-        <button className={
-          cx('button', 'decrement')
-        } onClick={this.onDecrement}>-</button>
-        <button className={
-          cx('button', 'destroy')
-        } onClick={this.onDestroyClick}>{String.fromCharCode(215)}</button>
+      <li className={styles.topic-item} key={this.props.id}>
+        <span className={styles.topic}>{this.props.text}</span>
+        <button className={styles.button} onClick={this.onIncrement}>+</button>
+        <button className={styles.button} onClick={this.onDecrement}>-</button>
+        <button className={styles.button} onClick={this.onDestroyClick}>{String.fromCharCode(215)}</button>
       </li>
     );
   }
