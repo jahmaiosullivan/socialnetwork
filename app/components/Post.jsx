@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from 'css/components/post.less';
 var cx = classNames.bind(styles);
 import riverImg from 'images/river.jpg';
+import fa from 'font-awesome/css/font-awesome';
 
 var PostImage = React.createClass({
     render: function () {
@@ -122,6 +123,7 @@ var Post = React.createClass({
     render: function () {
         return (
             <div className={styles['post-outer']}>
+                <i className={cx(fa.fa, fa['fa-fw'], fa['fa-bell'])}></i>
                 <PostTime />
                 <PostBody />
             </div>
