@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import styles from 'css/components/message';
+import styles from 'css/components/message.less';
 
 const Message = ({message, type}) => {
   return (

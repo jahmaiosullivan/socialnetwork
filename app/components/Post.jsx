@@ -4,6 +4,7 @@ import styles from 'css/components/post.less';
 var cx = classNames.bind(styles);
 import riverImg from 'images/river.jpg';
 import fa from 'font-awesome/css/font-awesome';
+import Block from 'react-uikit-block';
 
 var PostImage = React.createClass({
     render: function () {
@@ -97,12 +98,27 @@ var PostBody = React.createClass({
    render: function()
    {
        return (
-           <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
-               <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
-                   <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
-                   <PostSummary />
+           <Block context='muted' container>
+            <h4>Block</h4>
+           <div widths='1-3'>
+               <div>
+                   <article className={cx('post', 'hentry')} itemscope="" itemtype="http://schema.org/BlogPosting">
+                       <div className="post-body entry-content" id="post-body-7678110904519489062" itemprop="description articleBody">
+                           <textarea id="postData-7678110904519489062" value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
+                           <PostSummary />
+                       </div>
+                   </article>
                </div>
-           </article>
+               <div>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                   eiusmod tempor incididunt ut labore et dolore magna.
+               </div>
+               <div>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                   eiusmod tempor incididunt ut labore et dolore magna.
+               </div>
+           </div>
+        </Block>
        );
    }
 });
@@ -130,11 +146,5 @@ var Post = React.createClass({
         );
     }
 });
-
-
-
-
-
-
 
 export default Post;

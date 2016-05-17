@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { manualLogin, signUp, toggleLoginMode } from 'actions/users';
-import styles from 'css/components/login';
+import styles from 'css/components/login.less';
+import classNames from 'classnames/bind';
+var cx = classNames.bind(styles);
 import hourGlassSvg from 'images/hourglass.svg';
 
 
@@ -50,8 +52,8 @@ class LoginOrRegister extends Component {
           <h1 className={styles.heading}>Login with Email</h1>
           <div className={styles.alternative}>
             Not what you want?
-            <a className={styles.alternative-link}
-              onClick={this.toggleMode}> Register an Account</a>
+            <a className={styles.alternativeLink}
+              onClick={this.toggleMode}> Register now for an Account</a>
           </div>
         </div>
       );
@@ -77,7 +79,7 @@ class LoginOrRegister extends Component {
         <div className={styles.container}>
           { this.renderHeader() }
           <img className={styles.loading} src={hourGlassSvg} />
-          <div className={styles.email-container}>
+          <div className={cx('email-container')}>
             <form onSubmit={this.handleOnSubmit}>
               <input className={styles.input}
               type="email"
@@ -97,7 +99,7 @@ class LoginOrRegister extends Component {
                 value={isLogin ? 'Login' : 'Register'} />
             </form>
           </div>
-          <div className={styles.google-container}>
+          <div className={cx('google-container')}>
             <h1 className={styles.heading}>Google Login Demo</h1>
             <a className={styles.button}
           href="/auth/google">Login with Google</a>
