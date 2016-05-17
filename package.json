@@ -111,6 +111,7 @@
     "react-router": "^2.0.1",
     "react-router-redux": "^4.0.0",
     "react-transform-hmr": "^1.0.4",
+    "react-uikit-block": "^0.2.7",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
