@@ -5,7 +5,7 @@ import Post from 'components/Post';
 import SideBar from 'components/Sidebar';
 import PageContent from 'components/PageContent';
 import Message from 'containers/Message';
-import styles from 'css/main';
+import styles from 'css/main.less';
 
 
 /*

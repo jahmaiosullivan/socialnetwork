@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'css/main';
+import styles from 'css/main.less';
 import classNames from 'classnames/bind';
 var cx = classNames.bind(styles);
 
