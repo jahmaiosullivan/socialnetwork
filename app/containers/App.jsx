@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import Navigation from 'containers/Navigation';
 import FixedNav from 'containers/FixedNav';
 import Post from 'components/Post';
+import SideBar from 'components/Sidebar';
+import PageContent from 'components/PageContent';
 import Message from 'containers/Message';
 import styles from 'css/main';
 
@@ -18,10 +20,13 @@ import styles from 'css/main';
 const App = ({children}) => {
   return (
     <div className={styles.app}>
-      <Post />
-      <Navigation />
-      <Message />
-        {children}
+        <SideBar />
+        <PageContent>
+          <Post />
+          <Navigation />
+          <Message />
+          {children}
+        </PageContent>
     </div>
   );
 };

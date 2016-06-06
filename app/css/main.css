@@ -18,3 +18,21 @@ body {
   font-weight: normal;
   font-smoothing: antialiased;
 }
+
+.page-content {
+    margin-top: 0px;
+    padding: 0px;
+    overflow: auto;
+    position: relative;
+    min-height: 100%;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    z-index: 6;
+}
+
+@media (min-width: 980px) {
+    .page-content {
+        margin-left: 250px;
+        min-height: 100%;
+    }
+}
