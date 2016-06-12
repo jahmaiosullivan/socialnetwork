@@ -13,7 +13,7 @@ var PostImage = React.createClass({
                 <a className="thumbimgx" data-placement="top" data-toggle="tooltip" href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html" title="" data-original-title="lake surrounded by green trees">
                     <img alt="lake surrounded by green trees"  className="thumbimg" height="281" src={this.props.imgSrc} width="468.5" />
                 </a>
-                <div className="image-hover">
+                <div className="image-h over">
                     <a href="http://timeline-demo2.blogspot.com/2015/10/lake-surrounded-by-green-trees.html">
                         <span className="span-hover"></span>
                     </a>
