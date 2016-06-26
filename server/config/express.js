@@ -11,7 +11,7 @@ import { DB_TYPE, ENV } from './appConfig';
 import { session as dbSession } from '../db';
 
 export default (app) => {
-  app.set('port', (process.env.PORT || 3000));
+  app.set('port', (process.env.PORT || 80));
 
   // X-Powered-By header has no functional value.
   // Keeping it makes it easier for an attacker to build the site's profile

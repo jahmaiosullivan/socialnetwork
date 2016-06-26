@@ -71,6 +71,7 @@ var postCSSConfig = function () {
         require('postcss-nested')(),
         //  parse CSS and add vendor prefixes to CSS rules
         require('autoprefixer')({
+        require('autoprefixer')({
             browsers: ['last 2 versions', 'IE > 8']
         }),
         // A PostCSS plugin to console.log() the messages registered by other
