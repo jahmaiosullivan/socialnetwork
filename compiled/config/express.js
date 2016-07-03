@@ -45,7 +45,7 @@ var _db = require('../db');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (app) {
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 3000);
 
   // X-Powered-By header has no functional value.
   // Keeping it makes it easier for an attacker to build the site's profile
