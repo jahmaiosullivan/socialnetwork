@@ -17,22 +17,16 @@ import styles from 'css/main.less';
  * A better explanation of react-router is available here:
  * https://github.com/rackt/react-router/blob/latest/docs/Introduction.md
  */
-const App = ({children}) => {
-  return (
-    <div>
-        <SideBar />
-        <PageContent>
-          <Post />
-          <Navigation />
-          <Message />
-          {children}
-        </PageContent>
-    </div>
-  );
+const Main = ({children}) => {
+    return (
+        <div className={styles.app}>
+            {children}
+        </div>
+    );
 };
 
-App.propTypes = {
-  children: PropTypes.object
+Main.propTypes = {
+    children: PropTypes.object
 };
 
-export default App;
+export default Main;

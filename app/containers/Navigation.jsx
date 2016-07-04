@@ -17,10 +17,10 @@ const Navigation = ({user, dispatch}) => {
             <Link onClick={logout}
               className={styles.item} to="/">Logout</Link>
           ) : (
-            <Link className={styles.item} to="/login">Log in</Link>
+            <Link className={styles.item} to="/app/login">Log in</Link>
           )}
-          <Link className={styles.item} to="/dashboard">Dashboard</Link>
-          <Link to="/about" className={styles.item} activeClassName={styles.active}>About</Link>
+          <Link className={styles.item} to="/app/dashboard">Dashboard</Link>
+          <Link to="/app/about" className={styles.item} activeClassName={styles.active}>About</Link>
       </nav>
     );
 };
